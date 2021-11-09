@@ -19,3 +19,12 @@ nav {
     width: 25%;
     max-width: 200px;
 }
+nav * {
+    display:block;
+    width: 100%;
+
+}
+main {
+    width: 70%;
+    max-width: 600px;
+}
