@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: honeydew;
+}
+header {
+    color: honeydew;
+    background:linear-gradient(forestgreen, rgb(8, 82, 8));
+    padding: 5px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px black;
+}
+nav, main {
+    display: inline-block;
+    vertical-align: top;
+}
+nav {
+    width: 25%;
+    max-width: 200px;
+}
