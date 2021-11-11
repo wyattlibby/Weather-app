@@ -28,3 +28,21 @@ main {
     width: 70%;
     max-width: 600px;
 }
+.low {
+    background-color: darkgreen;
+    color: white;
+}
+.moderate {
+    background-color: gold;
+}
+.high {
+    background-color: orange;
+}
+.veryhigh {
+    background-color: crimson;
+    color: white;
+}
+.extreme {
+    background-color: darkorchid;
+    color: white;
+}
