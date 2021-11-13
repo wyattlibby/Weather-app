@@ -22,11 +22,37 @@ nav {
 nav * {
     display:block;
     width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
 
+}
+nav > button{
+    padding: 10px 5px;
+    background-color: forestgreen;
+    color: white;
+}
+nav footer{
+    padding: 0;
+    margin-top: 10px;
 }
 main {
     width: 70%;
-    max-width: 600px;
+    max-width: 1000px;
+}
+main img{
+    vertical-align: middle;
+}
+main section{
+    background-color: mediumaquamarine;
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    margin: 5px;
+
+
 }
 .low {
     background-color: darkgreen;
