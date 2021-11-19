@@ -1,6 +1,6 @@
 // settings
 const apikey = "a5403c39c80696399a3eb6883d440871";
-const storagekey="savedcity";
+const storagekey = "savedcity";
 
 // html elements
 const cityinput = document.querySelector("nav input");
@@ -78,35 +78,35 @@ function displayforecast(data) {
   }
   main.querySelector("footer").innerHTML = html;
 }
-function displaysavedcitys(){
-    const data=getdatafromstorage();
-    var html="";
-    for (let city of data){
-        html+=`<button>${city}</button>`;
-    }
-    searchedcitys.innerHTML=html;
-    const buttons=searchedcitys.querySelectorAll("button");
-    for (let button of buttons){
-        button.addEventListener("click",()=>{
-            getweatherbycity(button.textContent);
-        });
-    }
+function displaysavedcitys() {
+  const data = getdatafromstorage();
+  var html = "";
+  for (let city of data) {
+    html += `<button>${city}</button>`;
+  }
+  searchedcitys.innerHTML = html;
+  const buttons = searchedcitys.querySelectorAll("button");
+  for (let button of buttons) {
+    button.addEventListener("click", () => {
+      getweatherbycity(button.textContent);
+    });
+  }
 }
 
 // data managment
 function addsearchedcitys(city) {
-    const data=getdatafromstorage();
-    if (!data.includes(city)){
-        data.unshift(city);
-        setdatatostorage(data);
-        displaysavedcitys();
-    }
+  const data = getdatafromstorage();
+  if (!data.includes(city)) {
+    data.unshift(city);
+    setdatatostorage(data);
+    displaysavedcitys();
+  }
 }
-function getdatafromstorage(){
-    const data= localStorage.getItem(storagekey);
-    if (!data)return [];
-    return JSON.parse(data);
+function getdatafromstorage() {
+  const data = localStorage.getItem(storagekey);
+  if (!data) return [];
+  return JSON.parse(data);
 }
-function setdatatostorage(data){
-    localStorage.setItem(storagekey,JSON.stringify(data));
+function setdatatostorage(data) {
+  localStorage.setItem(storagekey, JSON.stringify(data));
 }
